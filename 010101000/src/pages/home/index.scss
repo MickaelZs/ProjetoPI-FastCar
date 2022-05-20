@@ -1,0 +1,312 @@
+.pagina-home{
+.faixa1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 14vh;
+    background-color: #000000; 
+}
+
+.io{
+    font-family: "fonte1";
+    color: #ffffff;
+    border: solid 3px;
+    border-radius: 20px;
+    background-color: #4b4df7;
+    width: 10em;
+    height: 3em;
+
+}
+
+.botp{
+    margin-left: 59em;
+    margin-top: 1.5em;  
+
+}
+
+.logo{
+    margin-top: -6em;
+    width: 250px;
+    height: 250px;
+    
+}
+
+
+
+.slide-f{
+    overflow: hidden;
+    height: 800px;
+    width: 1349px;
+    margin-left: 0px;
+   
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1200px;}
+    30% {left: 1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+
+.slide-ima{
+    width: 3600px;
+    height: 100px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+
+.sobre{
+    margin-top: -12em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    height: 109vh;
+    margin-left: 2.5em;
+}
+
+.sobre h1{
+    color: #4b4df7;
+    text-align: center;
+    font-size: 40px;
+    font-family: "fonte1";
+}
+
+.sobre p{
+    font-family: "fonte2";
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    
+}
+
+.sobre img{
+    margin: 80px;
+    border-radius: 20px;
+    width: 600px;
+    height: 500px;
+    margin-left: 20em;
+    
+}
+
+.sp{
+    margin-top: 80px;
+    margin-left: 3em;
+}
+
+.seiços{
+    background-color: #0000ff;
+    height: 90vh;
+}
+
+.f4{
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f6fa;
+    height: 80vh;
+}
+.f4-texto{
+    padding: 20px;
+    font-family: "fonte1";
+    
+}
+.od{
+    border-radius: 100%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    background: #4b4df7;
+    margin: 50px;
+
+}
+
+.od img{
+    width: 100%;
+}
+
+.ciculo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mik1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 120px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.container-mik1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-mik1 p{
+    font-family: "fonte1";
+}
+.subcontainer-mik1 {
+    display: flex;
+    border: px solid #4b4df7;
+    width: 100%;
+    justify-content: space-around;
+}
+#bloco {
+    width: 342px;
+    height: 408px;
+    background-color: #f5f6fa;
+    border-radius: 12px;
+    border: solid 2px blue;
+    cursor: pointer;
+    margin-left: 30px;
+    box-shadow: 5px 3px 3px #f5f6fa;
+}
+
+.des-bloco{
+    text-align: center;
+    font-family: "fonte2";
+}
+
+.bloco-im{
+    margin-left: 3em;
+    
+
+}
+
+.h1-mik1{
+    font-family: "fonte1";
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #000000;
+    height: 40vh;
+}
+
+.de{
+    margin-left: 10em;
+}
+
+.de h1{
+    font-family: "fonte1";
+    color: #4b4df7;
+}
+
+.de p{
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "fonte2";
+}
+
+.edes img{
+    margin-top: -15em;
+}
+
+.edes h1{
+    color: #4b4df7;
+    font-family: "fonte1";
+    margin-left: 1.9em;
+}
+
+.b-im{
+    height: 210px;
+    width: 338px;
+    border-radius: 12px;
+    border: solid 2px #ffffff;
+
+}
+
+#bl {
+    width: 342px;
+    height: 488px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: solid 2px #4b4df7;
+    cursor: pointer;
+    margin-right: px;
+    margin-left: 30px;
+    box-shadow: 5px 3px 3px #f5f6fa;
+}
+
+.tt{
+    font-size: 28px;
+    font-family: "fonte1";
+}
+
+.lp-l{
+    color: #ff0000;
+}
+
+.lp-m{
+    color: #0000ff;
+}
+
+.lp-u{
+    color: #9b1212;
+
+}
+
+.container-mik1 p{
+    font-size: 20px;
+}
+
+.j1 p{
+    font-size: 20px;
+}
+
+.te{
+    font-family: "fonte1";
+    font-size: 20px;
+    color: #ffffff;
+    border: solid 2px;
+    background-color: #4b4df7;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    margin-top: 3em;
+
+}
+
+@media screen and (max-width:560px){
+
+    .faixa1{
+        width: 100%;
+    }
+    
+    .slide-f{
+        width: 100%;
+    }
+
+    .f4{
+        flex-direction: column;
+    }
+
+    .sobre{
+        flex-direction: column;
+    }
+
+    
+}
+}

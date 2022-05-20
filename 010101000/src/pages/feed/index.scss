@@ -1,0 +1,243 @@
+.pagina-feed{
+    .Faixa-logo {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .Imagem-Logo {
+        width: 130px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    .Nome-Marca {
+        margin-top: 35px;
+        margin-left: 25px;
+        font-size: 25px;
+    }
+    
+    
+    .Primeira-Fileira {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    
+    .Balao1{
+        margin-top: 35px;
+        margin-left: 50px;
+        border-radius: 20px;
+        border: 1px solid #4B4DF7;
+    }
+    
+    
+    .Div-Imagem-Carro {
+        width: 1;
+    }
+    
+    
+    .Imagem-Carro {
+        width: 330px;
+        border-radius: 20px;
+        border: 3px solid #4B4DF7;
+    }
+    
+    
+    .Div-P {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    
+    .PrimeiroNome-Carro {
+        margin-right: 15px;
+    }
+    
+    
+    .DataKm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .P-data {
+        margin-right: 100px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .Div-Botao-Agendar {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+    
+    
+    .Botao-agendar {
+        padding: 7px 7px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        background-color: #4B4DF7;
+    }
+    
+    
+    
+    
+    
+    .Balao2{
+        margin-top: 35px;
+        margin-left: 50px;
+        border-radius: 20px;
+        border: 3px solid #4B4DF7;
+    }
+    
+    
+    .Div-Imagem-Carro2 {
+        width: 1;
+    }
+    
+    
+    .Imagem-Carro2 {
+        width: 350px;
+        border-radius: 20px;
+        border: 3px solid #4B4DF7;
+    }
+    
+    
+    .Div-P2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    
+    .PrimeiroNome-Carro2 {
+        margin-right: 15px;
+    }
+    
+    
+    .DataKm2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .P-data2 {
+        margin-right: 100px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .Div-Botao-Agendar2 {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+    
+    
+    
+    
+    
+    
+    .Balao3 {
+        margin-top: 35px;
+        margin-left: 50px;
+        border-radius: 20px;
+        border: 3px solid #4B4DF7;
+        margin-right: 70px;
+    }
+    
+    
+    .Div-Imagem-Carro3 {
+     width: 1;
+    }
+    
+    
+    .Imagem-Carro3 {
+        width: 300px;
+        border-radius: 20px;
+        border: 3px solid #4B4DF7;
+    }
+    
+    
+    .Div-P3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    
+    .PrimeiroNome-Carro3 {
+        margin-right: 15px;
+    }
+    
+    
+    .DataKm3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+    .P-data3 {
+        margin-right: 100px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .Div-Botao-Agendar3 {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+    
+    
+    
+    
+    
+    footer{
+        display: flex;
+        flex-direction: row;
+        background-color: #000000;
+        height: 50vh;
+    }
+    
+    .de h1{
+        font-family: "fonte1";
+        color: #4b4df7;
+    }
+    
+    .edes{
+        margin-left: 46em;
+    }
+    
+    .edes img{
+        margin-top: -15em;
+    }
+    
+    .edes h1{
+        color: #4b4df7;
+        font-family: "fonte1";
+        margin-left: 1.9em;
+    }
+    
+    .ptele{
+        color: #4B4DF7;
+    }
+}

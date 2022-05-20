@@ -1,0 +1,106 @@
+.pagina-login{
+
+    header{
+        display: flex;
+        justify-content: center;
+        background-color: #000;
+        height: 14vh;
+    }
+    
+    header img{
+        margin-top: -7.4em;
+        width: 300px;
+        height: 300px;
+        
+    
+    }
+    
+
+    
+    
+    
+    .co-a{
+        border: solid 3px #4B4DF7;
+        height: 100vh;
+    }
+    
+    .co-b{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0em;
+    }
+    
+    .co-c{
+        display: flex;
+        justify-content: center;
+        background-color: #4B4DF7;
+        width: 110vh;
+        height: 100vh;
+    }
+    
+    .c{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 90vh;
+        margin: 20px;
+        height: 90vh;
+        border-radius: 5px;
+        opacity: 1;
+        justify-content: center;
+        
+    }
+    
+    .c input{
+        height: 30px;
+        border-radius: 5px;
+        border: solid 2px #4B4DF7;
+        width: 450px;
+        margin: 15px;
+    }
+    
+    .c h1{
+        font-family: "fonte1";
+        align-items: center;
+        color: #000000;
+        font-family: "fonte1";
+    }
+    
+    .cl{
+        display: flex;
+        flex-direction: row;
+        margin-left: 34px;
+    }
+    
+    .cl input{
+        width: 33vh;
+    }
+    
+    .cm input{
+        font-size: 15px;
+        font-family: "fonte1";
+        background-color: #4B4DF7;
+        color: #f5f6fa;
+        width: 25vh;
+        height: 5vh;
+    
+        border-radius: 20px;
+        margin-top: 50px;
+    
+    }
+    
+    
+    
+    .co-d{
+        background-color: #f5f6fa ;
+        width: 110vh;
+        height: 80vh;
+    }
+    
+    .co-d img{
+        margin-top: 50px;
+    }
+    
+    
+    
+}
