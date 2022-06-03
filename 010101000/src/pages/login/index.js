@@ -4,8 +4,8 @@ export default function Index(){
 
     return(
         <div className='pagina-login'>
-            <header>
-        <img src='/images2/1650664822990.png' alt='' />
+        <header>
+        <img src='/images/1650664822990.png' alt='' />
 
     </header>
 
@@ -14,32 +14,25 @@ export default function Index(){
             <div className='co-a'>
                 <div className='co-b'>
                     <div className='co-c'>
+                        
                         <div className='c'>
-                            <center>
-                            <h1>Registro</h1>
-                            </center>
 
+                            <div className='kj'>
                             <center>
-                            <input  type='text' name='search' placeholder=' Nome '/>
-                            <div className='cl'>
-                           
-                            <input type='text' name='search' placeholder=' Sobrenome '/>
-                            <input type='text' name='search' placeholder=' Cpf '/>
+                            <h1>Login</h1>
+
+                            <input  type='text' name='search' placeholder=' Email ' />
                             
-                            </div>
-                            <input type='text' name='search' placeholder=' Telefone '/>
-                            <input type='text' name='search' placeholder=' Email '/>
-                            <input type='text' name='search' placeholder=' Senha '/>
-                            </center>
+                            <input type=' text ' name=' search ' placeholder=' Senha ' />
+                            
 
-                            <center>
                             <div className='cm'>
                                 <a href='/feed'>
-                                <input className='ol' type='button' value='CONTINUAR'/>
+                                <input className='ol' type='button' value='ENTRAR' />
                                 </a>
                             </div>
-                            </center>
-                        
+                        </center>
+                        </div>
 
                             
                             
@@ -48,9 +41,8 @@ export default function Index(){
 
                     </div>
 
-                    <div className='co-d'>
-                        <img src='/images2/2.png' alt='' width='690'/>
-
+                    <div >
+                        <img className='co-d' src='/images3/jp.png' alt='' />
                     </div>
 
                 </div>
@@ -59,7 +51,7 @@ export default function Index(){
         </div>
    
     </section>
-        </div>
+    </div>
     )
 
 }
