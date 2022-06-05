@@ -7,8 +7,9 @@ export default function Index(){
         <div className='faixa1'>
                 <img className='logo' src='/images/1650664822990.png' alt=''  />
                 <div className='botp'>
-                <a href='/login'>
-                <input className='io' type='button' value='LOGIN' />
+                <a className='io' href='/login'> Ver Veiculos
+                </a>
+                <a className='io' href='/login'> Login
                 </a>
                 </div>
             
@@ -51,7 +52,9 @@ export default function Index(){
     </div>
     <div className='ciculo'>
     <div className='od'>
+        <a href='/login'>
         <img src='/images/cao.png' alt=''/>
+        </a>
     </div>
     <div className='od'>
         <img src='/images/testedie.png' alt=''/>
@@ -65,7 +68,9 @@ export default function Index(){
 
 <section className='mik1'>
     <div className='container-mik1'>
+        <div>
         <h1 className='h1-mik1'>CARROS POPULARES</h1>
+        </div>
         <div className='subcontainer-mik1'/>
             <div className='j1' id='bl'>
                 <img className='b-im' src='/images/Fiat-Toro-Ultra_1.jpg' width='' alt=''/>
@@ -84,7 +89,7 @@ export default function Index(){
                
                 
                 
-                
+             
             </div>
             <div className='j1' id='bl'>
                 <img className='b-im' src='/images/Novo-Nissan-Kicks-Exclusive-13-source_edited.jpg' width='' alt=''/>
@@ -115,17 +120,17 @@ export default function Index(){
         <h1 className='h1-mik1'>O QUE FALA SOBRE NÓS</h1>
         <div className='subcontainer-mik1'>
             <div className='j1' id='bloco'>
-                <img className='bloco-im' src='/images/pngwing.com (6).png' width='200px' alt=''/>
+                <img className='bloco-im' src='/images/depoimento.png' width='250px' alt=''/>
                 <p className='des-bloco' > 'Ser ta maluco melhor concessionaria que já fui atentimento muito bom, carros são espetacular.'</p>
             </div>
             <div className='j1' id='bloco'>
-                <img className='bloco-im' src='/images/pngwing.com (6).png' width='200px' alt=''/>
+                <img className='bloco-im' src='./images/depoimento.png' width='250px' alt=''/>
                 <p className='des-bloco' > 'Concessionária  Sensacional  
                     Confiável e Tem os Melhores 
                     Veículos.' </p>
             </div>
             <div className='j1' id='bloco'>
-                <img className='bloco-im' src='/images/pngwing.com (6).png' width='200px' alt=''/>
+                <img className='bloco-im' src='/images/depoimento.png' width='250px' alt=''/>
                 <p className='des-bloco'> 'Sem Palavras para Descrever <br/>
                     Essa Concessionária  Veículos <br/>
                     Muito Bom  E Cima Melhores <br/>

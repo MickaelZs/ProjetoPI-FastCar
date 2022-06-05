@@ -68,9 +68,9 @@ export default function Index(){
     
                 <div className='div-cor'>
     
-                <input className='areav' type='text'/>
+                <input className='areav' type='date'/>
     
-                <input className='areac' type='text'/>
+                <input className='areac' type='time'/>
     
     
                 </div>

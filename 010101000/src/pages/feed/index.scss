@@ -3,15 +3,22 @@
         background-color: black;
         display: flex;
         justify-content: center;
+        height: 130px;
     }
     
     
     .Imagem-Logo {
-        width: 130px;
+        width: 190px;
+        height: 300px;
+        
     }
     
     p {
         font-size: 20px;
+    }
+
+    .Div-Imagem-Logo{
+        margin-top: -100px;
     }
     
     .Nome-Marca {
@@ -32,7 +39,7 @@
         margin-top: 35px;
         margin-left: 50px;
         border-radius: 20px;
-        border: 1px solid #4B4DF7;
+        border: 3px solid #000000;
     }
     
     
@@ -42,9 +49,10 @@
     
     
     .Imagem-Carro {
-        width: 330px;
+        width: 335px;
+        height: 225px;
         border-radius: 20px;
-        border: 3px solid #4B4DF7;
+        border: 3px solid #f5f6fa;
     }
     
     
@@ -71,14 +79,14 @@
     
     .P-data {
         margin-right: 100px;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     
     
     .Div-Botao-Agendar {
         display: flex;
         justify-content: center;
-        color: #fff;
+        color: rgb(0, 0, 0);
     }
     
     
@@ -107,9 +115,10 @@
     
     
     .Imagem-Carro2 {
-        width: 350px;
+        width: 335px;
+        height: 225px;
         border-radius: 20px;
-        border: 3px solid #4B4DF7;
+        border: 3px solid #f5f6fa;;
     }
     
     
@@ -141,7 +150,7 @@
     
     
     .Div-Botao-Agendar2 {
-        margin-top: 5px;
+        
         display: flex;
         justify-content: center;
         color: #fff;
@@ -167,9 +176,10 @@
     
     
     .Imagem-Carro3 {
-        width: 300px;
+        height: 225px;
+        width: 335px;
         border-radius: 20px;
-        border: 3px solid #4B4DF7;
+        border: 3px solid #f5f6fa;
     }
     
     

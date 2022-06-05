@@ -42,7 +42,7 @@ export default function Index(){
                     </div>
 
                     <div >
-                        <img className='co-d' src='/images3/jp.png' alt='' />
+                        <img className='co-d' src='./images/login.png' alt='' />
                     </div>
 
                 </div>

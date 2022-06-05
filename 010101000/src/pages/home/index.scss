@@ -9,18 +9,18 @@
 
 .io{
     font-family: "fonte1";
+    font-size: 25px;
     color: #ffffff;
-    border: solid 3px;
-    border-radius: 20px;
-    background-color: #4b4df7;
-    width: 10em;
-    height: 3em;
+    margin: 25px;
 
 }
 
 .botp{
-    margin-left: 59em;
-    margin-top: 1.5em;  
+    display: flex;
+    flex-direction: row;
+    margin-left: 9em;
+    margin-top: 0.5em;  
+    
 
 }
 
@@ -188,6 +188,7 @@
 
 .bloco-im{
     margin-left: 3em;
+    
     
 
 }

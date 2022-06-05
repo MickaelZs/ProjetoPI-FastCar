@@ -6,7 +6,7 @@ export default function Index(){
         <div className='pagina-feed'>
             <div className="Faixa-logo">
     <div className="Div-Imagem-Logo">
-        <img className="Imagem-Logo" src="/images3/logo.png" alt=""/>
+        <img className="Imagem-Logo" src="/images3/logo.png" alt="" />
     </div>
 </div>
 
@@ -96,12 +96,7 @@ export default function Index(){
 
 <p className="Nome-Marca">Veículos Chevrolet</p>
 
-
-
 <div className="Primeira-Fileira">
-
-
-
 
 <div className="Balao1">
     <div className="Div-Imagem-Carro">
