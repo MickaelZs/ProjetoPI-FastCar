@@ -1,3 +1,5 @@
+*{text-decoration: none;}
+
 .pagina-home{
 .faixa1{
     display: flex;
@@ -68,7 +70,7 @@
 }
 .img{
     height: 800px;
-    width: 1200px;
+    width: 1100px;
     position: relative;
     float: left;
 }
@@ -86,24 +88,27 @@
 .sobre h1{
     color: #4b4df7;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-family: "fonte1";
 }
 
 .sobre p{
     font-family: "fonte2";
-    font-size: 20px;
+    font-size: 30px;
     color: #000000;
+    width: 450px;
     text-align: center;
+    border: solid 3px red;
     
 }
 
 .sobre img{
-    margin: 80px;
+    border: solid 3px red;
+    margin: 0px;
     border-radius: 20px;
-    width: 600px;
+    width: 550px;
     height: 500px;
-    margin-left: 20em;
+    
     
 }
 

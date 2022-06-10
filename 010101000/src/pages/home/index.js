@@ -7,7 +7,7 @@ export default function Index(){
         <div className='faixa1'>
                 <img className='logo' src='/images/1650664822990.png' alt=''  />
                 <div className='botp'>
-                <a className='io' href='/login'> Ver Veiculos
+                <a className='io' href='/feed'>Veiculos
                 </a>
                 <a className='io' href='/login'> Login
                 </a>
@@ -37,10 +37,10 @@ export default function Index(){
 <div className='sobre'>
     <div className='sp'>
     <h1>Quem somos?</h1>
-    <p>Somos a Fast Car uma concessionaria
-        onde tem a missao de sempre entender as 
-        necessidades de nossos clientes 
-        Para atende-los com as melhores 
+    <p>Somos a Fast Car uma concessionaria <br/>
+        onde tem a missao de sempre entender as <br/>
+        necessidades de nossos clientes <br/>
+        Para atende-los com as melhores <br/>
         soluções em Veiculos. </p>
     </div> 
     <img src='/images/venda-carros-novos_2018-07-13_q98a7885_fabio_tito-g1.webp' alt=''/> 
