@@ -4,10 +4,10 @@ import { con } from "./connection.js";
 export async function AgendamentoTestedrive(agend){
     const comando =
     
-    `insert into TB_AGENDAMENTO (ID_AGENDAMENTO, ID_FUNCIONARIO, NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, NM_CLIENTE, DT_ATENDIMENTO)
-    values (?, ?, ?, ?, ?, ?, ?, ?)`
+    `insert into tb_agendamento (NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, NM_CLIENTE, DT_ATENDIMENTO)
+    values ( ?, ?, ?, ?, ?, ?)`
 
-     const [resposta] = await con.query(comando,[agend.AGENDAMENTO, agend.FUNCIONARIO, agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE, agend.NOME, agend.ATENDIMENTO ]);
+     const [resposta] = await con.query(comando,[ agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE, agend.NOME, agend.ATENDIMENTO ]);
      agend.id = resposta.insertId;
     
      return agend;
@@ -17,13 +17,13 @@ export async function AgendamentoTestedrive(agend){
 
     export async function listatodosagendamentos (){
         const comando = 
-        `SELECT id_agendamento			id,
-        nm_veiculo			nome,
-        nm_cor		cor,
-        ds_cpf	cpf,
-        ds_telefone   telefone,
-        nm_cliente    cliente,
-        dt_atendimento  atendimento
+        `SELECT ID_agendamento			id,
+        NM_veiculo			nome,
+        NM_cor		cor,
+        DS_cpf	cpf,
+        DS_telefone   telefone,
+        NM_cliente    cliente,
+        DT_atendimento  atendimento
     FROM tb_agendamento;`
     
     

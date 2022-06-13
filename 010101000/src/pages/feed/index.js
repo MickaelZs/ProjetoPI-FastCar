@@ -188,7 +188,7 @@ export default function Index(){
     </div>
 
         <div className="Div-P">
-    <p className="PrimeiroNome-Carro">FIAT</p> <p>KICKS</p>
+        <h1 className='tt'> <span className='lp-p'> FIAT </span> <span className='lp-l'>TORO</span> </h1>
         </div>
 
         <div className="DataKm">
@@ -330,11 +330,8 @@ export default function Index(){
 
 </div>
 
-
-
-
-
 </div>.
+
 
 
 <footer>

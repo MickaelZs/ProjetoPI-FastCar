@@ -1,9 +1,33 @@
 import './index.scss';
+import { cadastrarAgendamento } from '../../api/agendamentoApi'
+import {useState} from 'react'
+import { ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 export default function Index(){
+    const [nome, setNome] = useState('');
+    const [veiculo, setVeiculo] = useState('');
+    const [cor, setCor] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [atendimento, setAtendimento] = useState('');
+
+    async function salvarClick(){
+        try{
+            const r = await cadastrarAgendamento(nome,veiculo,cor,cpf,telefone,atendimento)
+            toast('agendamento feito');
+        }
+        catch (err){
+            toast('err.messae');
+
+        }
+    }
 
     return(
         <div className='pagina-agendamento'>
+            <ToastContainer/>
+            
             <div className='Div-FaixaPreta'>
         <div className='Div-Image-Logo'>
             <img className='Image-Logo' src='/images2/1650664822990.png' alt=''/>
@@ -25,7 +49,7 @@ export default function Index(){
                 Nome Completo:
             </p>
 
-            <input type='text'/>
+            <input type='text' placeholder='nome' value={nome} onChange={e => setNome(e.target.value)}/>
 
 
             <div className='div-cor'>
@@ -44,9 +68,9 @@ export default function Index(){
 
             <div className='div-cor'>
 
-            <input className='areav' type='text'/>
+            <input className='areav' type='text' placeholder='Veiculo' value={veiculo} onChange={e => setVeiculo(e.target.value)}/>
 
-            <input className='areac' type='text'/>
+            <input className='areac' type='text' placeholder='Cor' value={cor} onChange={e => setCor(e.target.value)}/>
 
 
             </div>
@@ -68,9 +92,9 @@ export default function Index(){
     
                 <div className='div-cor'>
     
-                <input className='areav' type='date'/>
+                <input className='areav' type='date' placeholder='data' value={atendimento} onChange={e => setAtendimento(e.target.value)}/>
     
-                <input className='areac' type='time'/>
+                <input className='areac' type='time' placeholder='horas' value={atendimento} onChange={e => setAtendimento(e.target.value)}/>
     
     
                 </div>
@@ -93,9 +117,9 @@ export default function Index(){
         
                     <div className='div-cor'>
         
-                    <input className='areav' type='text'/>
+                    <input className='areav' type='number'placeholder='0' value={cpf} onChange={e => setCpf(e.target.value)}/>
         
-                    <input className='areac' type='text'/>
+                    <input className='areac' type='number' placeholder='0' value={telefone} onChange={e => setTelefone(e.target.value)}/>
         
         
                     </div>
@@ -104,7 +128,7 @@ export default function Index(){
 
 
             <div className='div-botao'>
-                <a className='botao' href='/tabela'>AGENDAR</a>
+                <button className='botao' onClick={salvarClick}> AGENDAR</button> 
             </div>
 
 

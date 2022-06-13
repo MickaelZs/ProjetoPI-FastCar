@@ -23,13 +23,6 @@ export default function Index(){
         <img src='/images/foto6.jpg' alt='' width=''/>
     </div>
 
-    <div className='img'>
-        <img src='/images/foto7.jpg' alt='' width=''/>
-    </div>
-
-    <div className='img'>
-        <img src='/images/foto8.jpg' alt='' width=''/>
-    </div>
 
 </div>
 </div>
