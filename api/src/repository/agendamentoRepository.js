@@ -4,10 +4,10 @@ import { con } from "./connection.js";
 export async function AgendamentoTestedrive(agend){
     const comando =
     
-    `insert into tb_agendamento (NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, NM_CLIENTE, DT_ATENDIMENTO)
+    `insert into tb_agendamento (NM_CLIENTE, NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, DT_ATENDIMENTO)
     values ( ?, ?, ?, ?, ?, ?)`
 
-     const [resposta] = await con.query(comando,[ agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE, agend.NOME, agend.ATENDIMENTO ]);
+     const [resposta] = await con.query(comando,[agend.NOME, agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE,  agend.ATENDIMENTO ]);
      agend.id = resposta.insertId;
     
      return agend;
