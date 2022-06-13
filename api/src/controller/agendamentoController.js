@@ -2,11 +2,11 @@ import { Router } from "express";
 import { deletaagendamento, listatodosagendamentos, AgendamentoTestedrive, alteraAgendamento } from "../repository/agendamentoRepository.js";
 const server = Router();
 
-server.get ('/agendamentos',async (req,resp) => {
+server.get ('/agendamentos', async (req ,resp) => {
     try{
         const resposta = await listatodosagendamentos();
         resp.send(resposta);
-    }
+    }   
 
     catch (err){
         resp.status(401).send({
@@ -50,6 +50,7 @@ server.delete ('/testedrive/:id',async (req,resp) => {
     }
 
 })
+
 
 server.put ('/alteraagendamento', async (req,resp) => {
     try{

@@ -1,6 +1,5 @@
 import { con } from "./connection.js";
 
-
 export async function AgendamentoTestedrive(agend){
     const comando =
     
@@ -51,3 +50,4 @@ export async function AgendamentoTestedrive(agend){
     const [resposta] = await con.query(comando,[agend.veiculo, agend.cor, agend.cpf, agend.telefone, agend.cliente, agend.atendimento,id ])
     return resposta.affectedRows;
     }
+
