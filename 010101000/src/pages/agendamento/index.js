@@ -1,27 +1,29 @@
 import './index.scss';
 import { cadastrarAgendamento } from '../../api/agendamentoApi'
+import axios  from 'axios'
 import {useState} from 'react'
 import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 
 export default function Index(){
-    const [nome, setNome] = useState('');
-    const [veiculo, setVeiculo] = useState('');
-    const [cor, setCor] = useState('');
-    const [cpf, setCpf] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [atendimento, setAtendimento] = useState('');
+    const [NOME, setNOME] = useState('');
+    const [VEICULO, setVEICULO] = useState('');
+    const [COR, setCOR] = useState('');
+    const [CPF, setCPF] = useState('');
+    const [TELEFONE, setTELEFONE] = useState('');
+    const [ATENDIMENTO, setATENDIMENTO] = useState('');
 
-    async function salvarClick(){
-        try{
-            const r = await cadastrarAgendamento(nome,veiculo,cor,cpf,telefone,atendimento)
-            toast('agendamento feito');
-        }
-        catch (err){
-            toast('err.messae');
-
-        }
+    async function salvarClick(){         
+            const r = await axios.post('http://localhost:5000/agendartest', {
+            cliente: NOME,
+            nome: VEICULO,
+            cor: COR,
+            cpf: CPF,
+            telefone: TELEFONE,
+            atendimento: ATENDIMENTO
+        })
+        toast.dark('agendamento concluido');
     }
 
     return(
@@ -49,7 +51,7 @@ export default function Index(){
                 Nome Completo:
             </p>
 
-            <input type='text' placeholder='nome' value={nome} onChange={e => setNome(e.target.value)}/>
+            <input type='text' placeholder='nome' value={NOME} onChange={e => setNOME(e.target.value)}/>
 
 
             <div className='div-cor'>
@@ -68,9 +70,9 @@ export default function Index(){
 
             <div className='div-cor'>
 
-            <input className='areav' type='text' placeholder='Veiculo' value={veiculo} onChange={e => setVeiculo(e.target.value)}/>
+            <input className='areav' type='text' placeholder='Veiculo' value={VEICULO} onChange={e => setVEICULO(e.target.value)}/>
 
-            <input className='areac' type='text' placeholder='Cor' value={cor} onChange={e => setCor(e.target.value)}/>
+            <input className='areac' type='text' placeholder='Cor' value={COR} onChange={e => setCOR(e.target.value)}/>
 
 
             </div>
@@ -92,9 +94,9 @@ export default function Index(){
     
                 <div className='div-cor'>
     
-                <input className='areav' type='date' placeholder='data' value={atendimento} onChange={e => setAtendimento(e.target.value)}/>
+                <input className='areav' type='date' placeholder='data' value={ATENDIMENTO} onChange={e => setATENDIMENTO(e.target.value)}/>
     
-                <input className='areac' type='time' placeholder='horas' value={atendimento} onChange={e => setAtendimento(e.target.value)}/>
+                <input className='areac' type='time' placeholder='horas' value={ATENDIMENTO} onChange={e => setATENDIMENTO(e.target.value)}/>
     
     
                 </div>
@@ -117,9 +119,9 @@ export default function Index(){
         
                     <div className='div-cor'>
         
-                    <input className='areav' type='number'placeholder='0' value={cpf} onChange={e => setCpf(e.target.value)}/>
+                    <input className='areav' type='number'placeholder='0' value={CPF} onChange={e => setCPF(e.target.value)}/>
         
-                    <input className='areac' type='number' placeholder='0' value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                    <input className='areac' type='number' placeholder='0' value={TELEFONE} onChange={e => setTELEFONE(e.target.value)}/>
         
         
                     </div>
