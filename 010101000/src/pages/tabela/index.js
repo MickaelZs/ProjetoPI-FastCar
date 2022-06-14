@@ -1,7 +1,21 @@
 import './index.scss';
+import { listaagendamentos } from '../../api/agendamentoApi'
+import { useEffect, useReducer, useState } from 'react';
 
 
 export default function Index() {
+
+    const [nome, setNOME] = useState ([])
+
+    async function carregarTodosAgendamentos(){
+        const resp = await listaagendamentos();
+        console.log(resp);
+        setNOME(resp);
+    }
+
+    useEffect(() => {
+        carregarTodosAgendamentos();
+    }, [])
 
     
     return (
@@ -12,10 +26,7 @@ export default function Index() {
                 
                 <div className='conteudo'>
 
-                    <div className='caixa-busca'>
-                        <input type="text" placeholder='Buscar filmes por nome' />
-                        <img src='/assets/images/icon-buscar.svg' alt='buscar' />
-                    </div>
+                    
 
                     <table>
                         <thead>
@@ -27,10 +38,29 @@ export default function Index() {
                                 <th>COR</th>
                                 <th>CPF</th>
                                 <th>TELEFONE</th>
-                                <th></th>
+                                <th>ATENDIMENTO</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                            {nome.map(item =>
+                            <tr>
+                            <td># {item.id}</td>
+                            <th>{item.cliente}</th>
+                            <td>{item.veiculo}</td>
+                            <td>{item.cor}</td>
+                            <td>{item.cpf}</td>
+                            <td>{item.telefone}</td>
+                            <td>{item.atendimento}</td>
+                            <td>
+                                <img src='/assets/images/icon-editar.svg' alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                            </td>
+                        </tr>
+
+                                )}
+
                             <tr>
                                 <td>#01</td>
                                 <th>CLIENTE</th>
@@ -38,18 +68,6 @@ export default function Index() {
                                 <td>AZUL</td>
                                 <td>9898976</td>
                                 <td>4444444</td>
-                                <td>
-                                    <img src='/assets/images/icon-editar.svg' alt='editar' />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img src='/assets/images/icon-remover.svg' alt='remover' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#01</td>
-                                <td>Harry Potter e a Pedra Filosofal</td>
-                                <td>8,0</td>
-                                <td>04/01/05</td>
-                                <td>Sim</td>
                                 <td>
                                     <img src='/assets/images/icon-editar.svg' alt='editar' />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

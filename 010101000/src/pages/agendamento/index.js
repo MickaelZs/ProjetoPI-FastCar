@@ -14,16 +14,16 @@ export default function Index(){
     const [TELEFONE, setTELEFONE] = useState('');
     const [ATENDIMENTO, setATENDIMENTO] = useState('');
 
-    async function salvarClick(){         
-            const r = await axios.post('http://localhost:5000/agendartest', {
-            cliente: NOME,
-            nome: VEICULO,
-            cor: COR,
-            cpf: CPF,
-            telefone: TELEFONE,
-            atendimento: ATENDIMENTO
-        })
-        toast.dark('agendamento concluido');
+    async function salvarClick(){
+        try{      
+            const r = await cadastrarAgendamento(NOME,VEICULO,COR,CPF,TELEFONE,ATENDIMENTO)
+            toast.dark('agendamento concluido');
+        }
+        catch (err){
+            toast.error(err.response.data.erro)
+        }
+        
+        
     }
 
     return(
@@ -94,9 +94,9 @@ export default function Index(){
     
                 <div className='div-cor'>
     
-                <input className='areav' type='date' placeholder='data' value={ATENDIMENTO} onChange={e => setATENDIMENTO(e.target.value)}/>
+                <input className='areav' type='datetime-local' placeholder='data' value={ATENDIMENTO} onChange={e => setATENDIMENTO(e.target.value)}/>
     
-                <input className='areac' type='time' placeholder='horas' value={ATENDIMENTO} onChange={e => setATENDIMENTO(e.target.value)}/>
+               
     
     
                 </div>
