@@ -21,6 +21,11 @@ export async function listaagendamentos(){
 }
 
 export async function deletarAgendamento(id){
-  const resposta = await api.delete(´/testedrive/${id}´);
+  const resposta = await api.delete(`/testedrive/${id}`);
   return resposta.status;
+}
+
+export async function BuscarAgendamentoPorNome(nome){
+  const resposta = await api.get(`/agendamentos/busca?nome=${nome}`);
+  return resposta.data;
 }

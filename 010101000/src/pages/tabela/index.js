@@ -1,7 +1,7 @@
 import './index.scss';
 import { confirmAlert } from 'react-confirm-alert'
-import { deletarAgendamento, listaagendamentos } from '../../api/agendamentoApi'
-import { useEffect, useReducer, useState } from 'react';
+import { BuscarAgendamentoPorNome, deletarAgendamento, listaagendamentos } from '../../api/agendamentoApi'
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify'
 
 
@@ -11,14 +11,14 @@ export default function Index() {
     const [filtro, setFiltro] = useState ('')
 
     async function filtrar(){
-        const resp = await buscarAgendamentoPorNome(filtro);
-        setNOME(resp)
+        const resp = await BuscarAgendamentoPorNome(filtro);
+        setNOME(resp);
     }
 
     async function deletaAgendamento (id, nome){
 
         confirmAlert({
-            title: 'removerAgendamento',
+            title: 'Remover Agendamento',
             message: `deseja remover o agendamento ${nome}?`,
             buttons: [
                 {
@@ -31,9 +31,7 @@ export default function Index() {
                           else
                           filtrar();
                           toast.dark('agendamento removido')
-              
                     }
-
                 },
                 {
                     label:'nao'
@@ -57,11 +55,12 @@ export default function Index() {
     
     return (
         <main className='page page-consultar'>
-
-            <input type="text" value={filtro} onChange={e => setFiltro(e.target.value)} />
             
             
             <div className='container'>
+            <div className='pesquisa'>
+            <input type="text" value={filtro} onChange={e => setFiltro(e.target.value)} />
+            </div>
                 
                 <div className='conteudo'>
 
@@ -84,7 +83,7 @@ export default function Index() {
 
                             {nome.map(item =>
                             <tr>
-                            <td># {item.id}</td>
+                            <td>{item.id}</td>
                             <th>{item.cliente}</th>
                             <td>{item.veiculo}</td>
                             <td>{item.cor}</td>
@@ -94,27 +93,11 @@ export default function Index() {
                             <td>
                                 <img src='/assets/images/icon-editar.svg' alt='editar' />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' onClick={() => deletaAgendamento(item.id, item.nome) } />
+                                <img src='./images/filled-trash.png' alt='remover' onClick={() => deletaAgendamento(item.id, item.nome) } />
                             </td>
                         </tr>
 
-                                )}
-
-                            <tr>
-                                <td>#01</td>
-                                <th>CLIENTE</th>
-                                <td>FIAT</td>
-                                <td>AZUL</td>
-                                <td>9898976</td>
-                                <td>4444444</td>
-                                <td>
-                                    <img src='/assets/images/icon-editar.svg' alt='editar' />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img src='/assets/images/icon-remover.svg' alt='remover' />
-                                </td>
-                            </tr>
-                           
-                          
+                                )}                  
                         </tbody>
                     </table>
                     

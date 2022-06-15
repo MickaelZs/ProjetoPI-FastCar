@@ -13,11 +13,11 @@ export default function Index(){
     async function entrarClick(){
     try{    
     const r = await axios.post('http://localhost:5000/funcionario', {
-        EMAIL: email,
+        email: email,
         senha: senha
     });
 
-    navigate('/home');
+    navigate('/tabela');
     
 
     } 

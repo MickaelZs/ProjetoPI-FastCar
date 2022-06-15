@@ -33,9 +33,7 @@ export default function Index(){
     <p className="P-data">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
+       
 
 </div>
 

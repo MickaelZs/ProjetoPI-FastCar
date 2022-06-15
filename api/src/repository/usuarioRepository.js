@@ -5,7 +5,7 @@ export async function cadastrarfuncionario(email,senha) {
     `select ID_FUNCIONARIO 		id,
                 NM_USUARIO		nome,
                 DS_EMAIL		email
-           from tb_FUNCIONARIO
+           from tb_funcionario
           where DS_EMAIL 		= ?
             and DS_SENHA		= ? `
 

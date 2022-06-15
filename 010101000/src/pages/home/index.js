@@ -20,7 +20,7 @@ export default function Index(){
 <div className='slide-f'>
 <div className='slide-ima'>
     <div className='img'>
-        <img src='/images/foto6.jpg' alt='' width=''/>
+        <img src='./images/foto6.jpg' alt='' width=''/>
     </div>
 
 
