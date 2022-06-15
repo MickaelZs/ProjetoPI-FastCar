@@ -6,7 +6,7 @@ export async function AgendamentoTestedrive(agend){
     `insert into tb_agendamento (NM_CLIENTE, NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, DT_ATENDIMENTO)
     values ( ?, ?, ?, ?, ?, ?)`
 
-     const [resposta] = await con.query(comando,[agend.NOME, agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE,  agend.ATENDIMENTO ]);
+     const [resposta] = await con.query(comando,[agend.CLIENTE, agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE,  agend.ATENDIMENTO ]);
      agend.id = resposta.insertId;
     
      return agend;

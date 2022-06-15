@@ -81,13 +81,10 @@ export default function Index(){
             <div className='div-cor'>
 
                 <p className='p-veiculo2'>
-                    Data:
+                    Data e Horas:
                 </p>
     
-    
-                <p>
-                    Hora:
-                </p>
+
     
                 </div>
     

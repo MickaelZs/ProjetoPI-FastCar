@@ -19,12 +19,12 @@ export default function Index() {
 
         confirmAlert({
             title: 'Remover Agendamento',
-            message: `deseja remover o agendamento ${nome}?`,
+            message: `deseja remover o agendamento ${id}?`,
             buttons: [
                 {
                     label:'sim',
                     onClick: async () => {
-                        const resposta = await deletarAgendamento (id, nome);
+                        const filtro = await deletarAgendamento (id, nome);
                           if(filtro === ''){
                          carregarTodosAgendamentos();
                       }
@@ -34,7 +34,7 @@ export default function Index() {
                     }
                 },
                 {
-                    label:'nao'
+                    label:'Não'
                 }
             ]
         })
@@ -58,11 +58,12 @@ export default function Index() {
             
             
             <div className='container'>
-            <div className='pesquisa'>
-            <input type="text" value={filtro} onChange={e => setFiltro(e.target.value)} />
-            </div>
                 
                 <div className='conteudo'>
+                <div className='caixa-busca'>
+                        <input type="text" placeholder='Buscar agendamento por id' value={filtro} onChange={e => setFiltro(e.target.value)}/>
+                        <img src='/assets/images/icon-buscar.svg' alt='buscar' />
+                    </div>
 
                     
 
@@ -84,7 +85,7 @@ export default function Index() {
                             {nome.map(item =>
                             <tr>
                             <td>{item.id}</td>
-                            <th>{item.cliente}</th>
+                            <td>{item.cliente}</td>
                             <td>{item.veiculo}</td>
                             <td>{item.cor}</td>
                             <td>{item.cpf}</td>

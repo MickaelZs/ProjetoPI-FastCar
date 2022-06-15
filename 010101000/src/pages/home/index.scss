@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 14vh;
+    height: 10vh;
     background-color: #000000; 
 }
 
@@ -36,10 +36,9 @@
 
 
 .slide-f{
-    overflow: hidden;
+    
     height: 800px;
-    width: 1349px;
-    margin-left: 0px;
+    width: 1263px;
    
 }
 
@@ -70,13 +69,13 @@
 }
 .img{
     height: 800px;
-    width: 1100px;
+    width: 100px;
     position: relative;
     float: left;
 }
 
 .sobre{
-    margin-top: -12em;
+    margin-top: -7em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -98,12 +97,12 @@
     color: #000000;
     width: 450px;
     text-align: center;
-    border: solid 3px red;
+    
     
 }
 
 .sobre img{
-    border: solid 3px red;
+    
     margin: 0px;
     border-radius: 20px;
     width: 550px;
@@ -186,6 +185,11 @@
     box-shadow: 5px 3px 3px #f5f6fa;
 }
 
+#bloco:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+ }
+
 .des-bloco{
     text-align: center;
     font-family: "fonte2";
@@ -194,9 +198,12 @@
 .bloco-im{
     margin-left: 3em;
     
-    
-
 }
+
+.j1:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+ }
 
 .h1-mik1{
     font-family: "fonte1";
