@@ -1,11 +1,48 @@
 import './index.scss';
-import { listaagendamentos } from '../../api/agendamentoApi'
+import { confirmAlert } from 'react-confirm-alert'
+import { deletarAgendamento, listaagendamentos } from '../../api/agendamentoApi'
 import { useEffect, useReducer, useState } from 'react';
+import { toast } from 'react-toastify'
 
 
 export default function Index() {
 
     const [nome, setNOME] = useState ([])
+    const [filtro, setFiltro] = useState ('')
+
+    async function filtrar(){
+        const resp = await buscarAgendamentoPorNome(filtro);
+        setNOME(resp)
+    }
+
+    async function deletaAgendamento (id, nome){
+
+        confirmAlert({
+            title: 'removerAgendamento',
+            message: `deseja remover o agendamento ${nome}?`,
+            buttons: [
+                {
+                    label:'sim',
+                    onClick: async () => {
+                        const resposta = await deletarAgendamento (id, nome);
+                          if(filtro === ''){
+                         carregarTodosAgendamentos();
+                      }
+                          else
+                          filtrar();
+                          toast.dark('agendamento removido')
+              
+                    }
+
+                },
+                {
+                    label:'nao'
+                }
+            ]
+        })
+
+        
+    }
 
     async function carregarTodosAgendamentos(){
         const resp = await listaagendamentos();
@@ -20,6 +57,8 @@ export default function Index() {
     
     return (
         <main className='page page-consultar'>
+
+            <input type="text" value={filtro} onChange={e => setFiltro(e.target.value)} />
             
             
             <div className='container'>
@@ -55,7 +94,7 @@ export default function Index() {
                             <td>
                                 <img src='/assets/images/icon-editar.svg' alt='editar' />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                                <img src='/assets/images/icon-remover.svg' alt='remover' onClick={() => deletaAgendamento(item.id, item.nome) } />
                             </td>
                         </tr>
 

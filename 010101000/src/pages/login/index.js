@@ -1,6 +1,33 @@
 import './index.scss';
+import axios from 'axios'
+import { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 
 export default function Index(){
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro,setErro] = useState('');
+
+    const navigate = useNavigate()
+
+    async function entrarClick(){
+    try{    
+    const r = await axios.post('http://localhost:5000/funcionario', {
+        EMAIL: email,
+        senha: senha
+    });
+
+    navigate('/home');
+    
+
+    } 
+    catch(err){
+        if(err.response.status == 401){
+            setErro(err.response.data.erro)
+        }
+
+    }
+    }
 
     return(
         <div className='pagina-login'>
@@ -21,15 +48,21 @@ export default function Index(){
                             <center>
                             <h1>Login</h1>
 
-                            <input  type='text' name='search' placeholder=' Email ' />
+                            <input  type='text' name='search' placeholder=' Email ' value={email} onChange={e => setEmail(e.target.value)} />
                             
-                            <input type=' text ' name=' search ' placeholder=' Senha ' />
+                            <input type='password' name=' search ' placeholder=' *** ' value={senha} onChange={e => setSenha(e.target.value)} />
                             
+                            <div>
+
+
+                            </div>
 
                             <div className='cm'>
-                                <a href='/feed'>
-                                <input className='ol' type='button' value='ENTRAR' />
-                                </a>
+                                <button className='ol' onClick={entrarClick}>entrar</button>                            
+                            </div>
+
+                            <div className='kj'>
+                                {erro}
                             </div>
                         </center>
                         </div>
@@ -41,9 +74,7 @@ export default function Index(){
 
                     </div>
 
-                    <div >
-                        <img className='co-d' src='./images/login.png' alt='' />
-                    </div>
+                    
 
                 </div>
                 

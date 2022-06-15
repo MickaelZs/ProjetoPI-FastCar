@@ -1,11 +1,14 @@
 import { con } from "./connection.js";
 
-export async function cadastrarfuncionario(funcc) {
-    const comando = ` insert into tb_funcionario (DS_EMAIL, DS_SENHA)
-    values (?, ?)`;
+export async function cadastrarfuncionario(email,senha) {
+    const comando = 
+    `select ID_FUNCIONARIO 		id,
+                NM_USUARIO		nome,
+                DS_EMAIL		email
+           from tb_FUNCIONARIO
+          where DS_EMAIL 		= ?
+            and DS_SENHA		= ? `
 
-    const [resposta] = await con.query(comando,[funcc.email,funcc.senha])
-    funcc.id = resposta.insertId;
-
-    return funcc;
+    const [linhas] = await con.query(comando,[email,senha])
+    return linhas[0];
 }

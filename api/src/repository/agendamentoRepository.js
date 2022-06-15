@@ -38,6 +38,25 @@ export async function AgendamentoTestedrive(agend){
         return resposta.affectedRows;
     }
 
+
+
+    export async function buscarPorNome(nome) {
+        const comando =
+            `SELECT ID_AGENDAMENTO		id,
+                    NM_CLIENTE		cliente,
+                    NM_VEICULO      veiculo,
+                    NM_COR	cor,
+                    DS_CPF	cpf,
+                    DS_TELEFONE	telefone,
+                    DT_ATENDIMENTO      atendimento
+               FROM tb_agendamento
+              WHERE NM_CLIENTE like ? `;
+        
+        const [linhas] = await con.query(comando, [ `%${nome}%` ]);
+        return linhas;
+    }
+
+
     export  async function alteraAgendamento(agend){
         const comando = `UPDATE TB_AGENDAMENTO SELECT
         nm_veiculo			?,

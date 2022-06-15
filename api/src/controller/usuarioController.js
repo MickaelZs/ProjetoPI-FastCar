@@ -7,6 +7,9 @@ server.post('/funcionario', async (req,resp) => {
         
       const {email, senha} = req.body;
       const funcc = await cadastrarfuncionario(email, senha);
+      if (!funcc) {
+        throw new Error('Credenciais inválidas');
+    }
       
       resp.send(funcc);
  

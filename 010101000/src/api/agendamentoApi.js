@@ -19,3 +19,8 @@ export async function listaagendamentos(){
   const resposta = await api.get('/agendamentos');
   return resposta.data;
 }
+
+export async function deletarAgendamento(id){
+  const resposta = await api.delete(´/testedrive/${id}´);
+  return resposta.status;
+}
