@@ -69,13 +69,17 @@ server.delete ('/testedrive/:id',async (req,resp) => {
 })
 
 
-server.put ('/alteraagendamento', async (req,resp) => {
+server.put ('/agendamento/:id', async (req,resp) => {
     try{
         const {id} = req.params;
         const agend = req.body;
-        const resposta = await alteraAgendamento(agend, id)
-        resp.send(resposta)
-
+   
+        const resposta = await alteraAgendamento(id, agend);
+        if (resposta != 1)
+            throw new Error('agendamento não pode ser alterado');
+        else
+            resp.status(204).send();
+        
     }
 
     catch (err){

@@ -94,4 +94,25 @@
         visibility: visible;
     }
 
+    .Div-Botao-Agendar2 {
+        
+        display: flex;
+        justify-content: right;
+        color: #fff;
+    }
+    
+    .Botao-agendar {
+        transition: all 0.5s ease-in ;
+        color: #fff;
+        padding: 7px 7px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        background-color: #4B4DF7;
+    }
+
+    .buscaagenda {
+        display: flex;
+        justify-content: right;
+    }
+
 }

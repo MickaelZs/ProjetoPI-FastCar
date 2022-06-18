@@ -3,7 +3,6 @@ import { con } from "./connection.js";
 export async function cadastrarfuncionario(email,senha) {
     const comando = 
     `select ID_FUNCIONARIO 		id,
-                NM_USUARIO		nome,
                 DS_EMAIL		email
            from tb_funcionario
           where DS_EMAIL 		= ?

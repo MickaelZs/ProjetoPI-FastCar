@@ -60,9 +60,14 @@ export default function Index() {
             <div className='container'>
                 
                 <div className='conteudo'>
-                <div className='caixa-busca'>
-                        <input type="text" placeholder='Buscar agendamento por id' value={filtro} onChange={e => setFiltro(e.target.value)}/>
-                        <img src='/assets/images/icon-buscar.svg' alt='buscar' />
+                    <div classname='buscaagenda'>
+                        <div className='caixa-busca'>
+                            <input type="text" placeholder='Buscar agendamento por id' value={filtro} onChange={e => setFiltro(e.target.value)}/>
+                            <img src='/assets/images/icon-buscar.svg' alt='buscar' />
+                        </div>
+                        <div className="Div-Botao-Agendar2">
+                            <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
+                        </div>
                     </div>
 
                     

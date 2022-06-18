@@ -57,15 +57,16 @@ export async function AgendamentoTestedrive(agend){
     }
 
 
-    export  async function alteraAgendamento(agend){
-        const comando = `UPDATE TB_AGENDAMENTO SELECT
-        nm_veiculo			?,
-        nm_cor		?,
-        ds_cpf	?,
-        ds_telefone   ?,
-        nm_cliente    ?,
-        dt_atendimento  ?,
-    WHERE id_agendamento`;
+    export  async function alteraAgendamento(id, agend){
+        const comando = 
+            `update tb_agendamento
+            set	NM_VEICULO  = ?,
+                NM_COR	= ?,
+                DS_CPF	= ?,
+                DS_TELEFONE	= ?,
+                NM_CLIENTE	= ?,
+                DT_ATENDIMENTO = ?
+            where id_agendamento = ?`
     const [resposta] = await con.query(comando,[agend.veiculo, agend.cor, agend.cpf, agend.telefone, agend.cliente, agend.atendimento,id ])
     return resposta.affectedRows;
     }
