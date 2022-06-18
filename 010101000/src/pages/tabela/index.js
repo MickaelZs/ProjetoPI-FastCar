@@ -62,8 +62,8 @@ export default function Index() {
                 <div className='conteudo'>
                     <div classname='buscaagenda'>
                         <div className='caixa-busca'>
-                            <input type="text" placeholder='Buscar agendamento por id' value={filtro} onChange={e => setFiltro(e.target.value)}/>
-                            <img src='/assets/images/icon-buscar.svg' alt='buscar' />
+                            <input type="text" placeholder='Buscar agendamento por nome' value={filtro} onChange={e => setFiltro(e.target.value)}/>
+                            <img src='/assets/images/icon-buscar.svg' alt='buscar' onClick={filtrar} />
                         </div>
                         <div className="Div-Botao-Agendar2">
                             <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
@@ -78,7 +78,7 @@ export default function Index() {
                                 
                                 <th>IDENTIFICAÇÃO</th>
                                 <th>CLIENTE</th>
-                                <th>VEICULO</th>
+                                <th>CARRO</th>
                                 <th>COR</th>
                                 <th>CPF</th>
                                 <th>TELEFONE</th>
@@ -91,11 +91,11 @@ export default function Index() {
                             <tr>
                             <td>{item.id}</td>
                             <td>{item.cliente}</td>
-                            <td>{item.veiculo}</td>
+                            <td>{item.nome}</td>
                             <td>{item.cor}</td>
                             <td>{item.cpf}</td>
                             <td>{item.telefone}</td>
-                            <td>{item.atendimento}</td>
+                            <td>{item.atendimento.substr(0, 10)}</td>
                             <td>
                                 <img src='/assets/images/icon-editar.svg' alt='editar' />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

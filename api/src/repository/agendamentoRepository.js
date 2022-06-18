@@ -6,7 +6,7 @@ export async function AgendamentoTestedrive(agend){
     `insert into tb_agendamento (NM_CLIENTE, NM_VEICULO, NM_COR, DS_CPF, DS_TELEFONE, DT_ATENDIMENTO)
     values ( ?, ?, ?, ?, ?, ?)`
 
-     const [resposta] = await con.query(comando,[agend.CLIENTE, agend.VEICULO, agend.COR, agend.CPF, agend.TELEFONE,  agend.ATENDIMENTO ]);
+     const [resposta] = await con.query(comando,[agend.CLIENTE, agend.CARRO, agend.COR, agend.CPF, agend.TELEFONE,  agend.ATENDIMENTO ]);
      agend.id = resposta.insertId;
     
      return agend;
@@ -67,7 +67,7 @@ export async function AgendamentoTestedrive(agend){
                 NM_CLIENTE	= ?,
                 DT_ATENDIMENTO = ?
             where id_agendamento = ?`
-    const [resposta] = await con.query(comando,[agend.veiculo, agend.cor, agend.cpf, agend.telefone, agend.cliente, agend.atendimento,id ])
+    const [resposta] = await con.query(comando,[agend.carro, agend.cor, agend.cpf, agend.telefone, agend.cliente, agend.atendimento,id ])
     return resposta.affectedRows;
     }
 
