@@ -56,6 +56,22 @@ export async function AgendamentoTestedrive(agend){
         return linhas;
     }
 
+    export async function buscarPorId(id) {
+        const comando =
+            `SELECT ID_AGENDAMENTO		id,
+                    NM_CLIENTE		cliente,
+                    NM_VEICULO      veiculo,
+                    NM_COR	cor,
+                    DS_CPF	cpf,
+                    DS_TELEFONE	telefone,
+                    DT_ATENDIMENTO      atendimento
+               FROM tb_agendamento
+              WHERE ID_AGENDAMENTO = ? `;
+        
+        const [linhas] = await con.query(comando, [id]);
+        return linhas[0];
+    }
+
 
     export  async function alteraAgendamento(id, agend){
         const comando = 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { deletaagendamento, listatodosagendamentos, AgendamentoTestedrive, alteraAgendamento, buscarPorNome } from "../repository/agendamentoRepository.js";
+import { deletaagendamento, listatodosagendamentos, AgendamentoTestedrive, alteraAgendamento, buscarPorNome, buscarPorId } from "../repository/agendamentoRepository.js";
 const server = Router();
 
 server.get ('/agendamentos', async (req ,resp) => {
@@ -39,6 +39,23 @@ server.get('/agendamentos/busca', async (req, resp) => {
         const { nome } = req.query;
         
         const resposta = await buscarPorNome(nome);
+
+        if (resposta.length == 0)
+            resp.status(404).send([])
+        else
+            resp.send(resposta);
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.get('/agendamentos/:id', async (req, resp) => {
+    try {
+        const { id } = req.params;
+        
+        const resposta = await buscarPorId(id);
 
         if (resposta.length == 0)
             resp.status(404).send([])

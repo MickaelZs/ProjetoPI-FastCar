@@ -1,14 +1,21 @@
 import './index.scss';
 import { confirmAlert } from 'react-confirm-alert'
-import { BuscarAgendamentoPorNome, deletarAgendamento, listaagendamentos } from '../../api/agendamentoApi'
+import { BuscarAgendamentoPorNome, deletarAgendamento, listaagendamentos, alterarAgendamento } from '../../api/agendamentoApi'
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Index() {
 
     const [nome, setNOME] = useState ([])
     const [filtro, setFiltro] = useState ('')
+
+    const navigate = useNavigate();
+
+    function editarAgendamento(id){
+        navigate(`/alterar/${id}`)
+    }
 
     async function filtrar(){
         const resp = await BuscarAgendamentoPorNome(filtro);
@@ -76,7 +83,7 @@ export default function Index() {
                         <thead>
                             <tr>
                                 
-                                <th>IDENTIFICAÇÃO</th>
+                                <th>ID</th>
                                 <th>CLIENTE</th>
                                 <th>CARRO</th>
                                 <th>COR</th>
@@ -95,9 +102,9 @@ export default function Index() {
                             <td>{item.cor}</td>
                             <td>{item.cpf}</td>
                             <td>{item.telefone}</td>
-                            <td>{item.atendimento.substr(0, 10)}</td>
+                            <td>{item.atendimento}</td>
                             <td>
-                                <img src='/assets/images/icon-editar.svg' alt='editar' />
+                                <img src='/assets/images/icon-editar.svg' alt='editar' onClick={() => editarAgendamento(item.id)} />
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <img src='./images/filled-trash.png' alt='remover' onClick={() => deletaAgendamento(item.id, item.nome) } />
                             </td>

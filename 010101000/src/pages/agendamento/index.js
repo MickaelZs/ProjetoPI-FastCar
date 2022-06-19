@@ -1,9 +1,11 @@
 import './index.scss';
-import { cadastrarAgendamento } from '../../api/agendamentoApi'
+import { cadastrarAgendamento, buscarPorId, alterarAgendamento} from '../../api/agendamentoApi'
 import axios  from 'axios'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
+import {useHref, useParams} from 'react-router-dom'
 import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+
 
 
 export default function Index(){
@@ -13,18 +15,57 @@ export default function Index(){
     const [CPF, setCPF] = useState('');
     const [TELEFONE, setTELEFONE] = useState('');
     const [ATENDIMENTO, setATENDIMENTO] = useState('');
+    const [ID, setId] = useState(0);
+
+    const { idparams } = useParams();
+
+    useEffect(() => {
+        if (idparams) {
+            carregarAgendamento();
+        }
+    }, [])
+
+    async function carregarAgendamento() {
+        const resposta = await buscarPorId(idparams);
+        setNOME(resposta.NOME);
+        setVEICULO(resposta.VEICULO);
+        setCOR(resposta.COR);
+        setCPF(resposta.CPF);
+        setTELEFONE(resposta.TELEFONE);
+        setATENDIMENTO(resposta.ATENDIMENTO);
+        setId(resposta.ID);
+    }
+
 
     async function salvarClick(){
         try{      
-            const r = await cadastrarAgendamento(NOME,VEICULO,COR,CPF,TELEFONE,ATENDIMENTO)
+            if(ID === 0 ) {
+            const r = await cadastrarAgendamento(NOME,VEICULO,COR,CPF,TELEFONE,ATENDIMENTO);
+            setId(r.ID)
             toast.dark('agendamento concluido');
         }
+        else {
+           await alterarAgendamento(ID, NOME, VEICULO, COR, CPF, TELEFONE, ATENDIMENTO);
+           toast.dark('agendamento alterado')
+        }
+    }
         catch (err){
             toast.error(err.response.data.erro)
         }
         
         
     }
+
+    function novoClick() {
+        setId(0);
+        setNOME('');
+        setVEICULO('');
+        setCOR('');
+        setCPF('');
+        setTELEFONE('');
+        setATENDIMENTO('');
+    }
+
 
     return(
         <div className='pagina-agendamento'>
@@ -127,7 +168,10 @@ export default function Index(){
 
 
             <div className='div-botao'>
-                <button className='botao' onClick={salvarClick}> AGENDAR</button> 
+                <button className='botao' onClick={salvarClick}> {ID === 0 ? 'SALVAR' : 'ALTERAR'}</button> 
+            </div>
+            <div className='div-botao'>
+                <button className='botao' onClick={novoClick}> NOVO</button> 
             </div>
 
 

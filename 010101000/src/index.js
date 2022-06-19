@@ -21,6 +21,7 @@ root.render(
       <Route path='/home' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/agendamento' element={<Agendamento />} />
+      <Route path='/alterar/:idparams' element={<Agendamento/>} />
       <Route path='/tabela' element={<Tabela />} />
       <Route path='/feed' element={<Feed />} />
     </Routes>
