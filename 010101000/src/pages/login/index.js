@@ -58,7 +58,7 @@ export default function Index(){
                             </div>
 
                             <div className='cm'>
-                                <button className='ol' onClick={entrarClick}>entrar</button>                            
+                                <button className='ol' onClick={entrarClick}>Entrar</button>                            
                             </div>
 
                             <div className='kj'>
@@ -74,7 +74,8 @@ export default function Index(){
 
                     </div>
 
-                    
+                    <img className='imgl' src='/images2/2.png   ' alt='' />
+
 
                 </div>
                 
