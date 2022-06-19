@@ -29,3 +29,8 @@ export async function BuscarAgendamentoPorNome(nome){
   const resposta = await api.get(`/agendamentos/busca?nome=${nome}`);
   return resposta.data;
 }
+
+export async function buscarPorId(id) {
+  const resposta = await api.get(`/filme/${id}`);
+  return resposta.data;
+}

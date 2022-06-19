@@ -52,10 +52,6 @@ export default function Index(){
     <p className="P-data2">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar2">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
 </div>
 
 
@@ -73,10 +69,6 @@ export default function Index(){
 
         <div className="DataKm3">
     <p className="P-data3">2021</p> <p>0km</p>
-        </div>
-
-        <div className="Div-Botao-Agendar3">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
         </div>
 
 </div>
@@ -109,10 +101,6 @@ export default function Index(){
     <p className="P-data">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
 </div>
 
 
@@ -130,10 +118,7 @@ export default function Index(){
     <p className="P-data2">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar2">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
+       
 </div>
 
 
@@ -153,10 +138,7 @@ export default function Index(){
     <p className="P-data3">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar3">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
+       
 </div>
 
 
@@ -193,10 +175,7 @@ export default function Index(){
     <p className="P-data">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
+       
 </div>
 
 
@@ -214,10 +193,7 @@ export default function Index(){
     <p className="P-data2">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar2">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
+        
 </div>
 
 
@@ -237,9 +213,7 @@ export default function Index(){
     <p className="P-data3">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar3">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
+
 
 </div>
 
@@ -278,10 +252,7 @@ export default function Index(){
     <p className="P-data">2021</p> <p>0km</p>
         </div>
 
-        <div className="Div-Botao-Agendar">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
-        </div>
-
+       
 </div>
 
 
@@ -297,10 +268,6 @@ export default function Index(){
 
         <div className="DataKm2">
     <p className="P-data2">2021</p> <p>0km</p>
-        </div>
-
-        <div className="Div-Botao-Agendar2">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
         </div>
 
 </div>
@@ -320,10 +287,6 @@ export default function Index(){
 
         <div className="DataKm3">
     <p className="P-data3">2021</p> <p>0km</p>
-        </div>
-
-        <div className="Div-Botao-Agendar3">
-    <a className="Botao-agendar" href="/agendamento">AGENDAR</a>
         </div>
 
 </div>
