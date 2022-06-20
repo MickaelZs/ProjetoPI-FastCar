@@ -4,7 +4,7 @@ export default function Index(){
 
     return (
         <div className='pagina-feed'>
-            <div className="Faixa-logo">
+            <div className="Faixa-logo" id= "demo">
     <div className="Div-Imagem-Logo">
         <img className="Imagem-Logo" src="/images3/logo.png" alt="" />
     </div>
@@ -294,16 +294,21 @@ export default function Index(){
 </div>.
 
 
-
 <footer>
-    <div className="de">
-        <h1>Telefones</h1>
-        <img src="/images3/download.png" alt="" width="65"/>
-        <p className="ptele"> (11) 9760-73105</p>
+    <div className='degabe'>
+        <h1 className="querocome">Fast Car </h1>
+
+        <p className="gabe"> @fastcar
+        <p> FastCar@gmail</p>
+        <p> @xhfastcar_</p>
+        <p> FASTCAR_EMPRESS</p>
+        
+        </p>
     </div>
-    <div className="edes">
-        <h1>REDES SOCIAIS</h1>
-        <img src="/images3/1650457116315.png" alt="" width="500"/>
+    <div className='edes'>
+        <h1 className="querocome">REDES SOCIAIS</h1>
+        <img src='/images/1650457116315.png' alt='' width='500'/>
+    
     </div>
 
 </footer>

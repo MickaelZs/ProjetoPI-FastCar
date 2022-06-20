@@ -10,6 +10,32 @@
         flex-grow: 1;
     }
 
+    .Div-FaixaPreta {
+        background-color: #000;
+        height: 25vh;
+        width: 80vh;
+        
+    }
+    #demo {
+        -webkit-box-shadow:5px 13px 27px 5px rgba(0, 0, 0, 0.075);
+        box-shadow: 5px 13px 27px 2px rgba(0, 0, 0, 0.199);
+        }
+    
+    
+    .Div-Image-Logo {
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    
+    .Image-Logo {
+    width: 220px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    }
     
 
 
@@ -60,8 +86,10 @@
         text-shadow: 0px 1px 4px rgba(217, 217, 217, 0.5);
     }
     thead {
-        background-color: #7773F2;
+        background-color: #4B4DF7;
+        border-radius: 10px;
     }
+    
     td {
         padding: 25px 40px;
         font-weight: 500;
@@ -108,6 +136,15 @@
         border-radius: 25px;
         margin-bottom: 10px;
         background-color: #4B4DF7;
+    }
+
+    .Botao-agendar:hover {
+        transition: all 0.5s ease-in ;
+        color: #fff;
+        padding: 7px 7px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        background-color: #000000;
     }
 
     .buscaagenda {

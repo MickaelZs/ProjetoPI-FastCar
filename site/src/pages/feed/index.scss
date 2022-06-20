@@ -10,12 +10,20 @@
         height: 100px;
         size: 100px;
     }
-    
+    *{
+        margin: 0vh;
+    }
     .Imagem-Logo {
-        width: 190px;
+        width: 220px;
         height: 300px;
         
     }
+
+    #demo {
+        -webkit-box-shadow:5px 13px 27px 5px rgba(0, 0, 0, 0.397);
+        box-shadow: 5px 13px 27px 5px rgba(0, 0, 0, 0.616);
+        }
+    
     
     p {
         font-size: 20px;
@@ -117,7 +125,15 @@
         background-color: #4B4DF7;
     }
     
+    .edes img{
+        margin-top: -15em;
+    }
     
+    .edes h1{
+        color: #4b4df7;
+        font-family: "fonte1";
+        margin-left: 1.9em;
+    }
     
     
     
@@ -278,4 +294,20 @@
     .lp-l{
         color: #ff0000;
     }
+}
+
+
+.gabe{
+    color: #ffff;
+
+}
+
+.degabe{
+    display: flex;
+    flex-direction: column;
+    margin: 4em 4em 4em 4em;
+}
+
+.querocome{
+    color: #4b4df7;
 }
